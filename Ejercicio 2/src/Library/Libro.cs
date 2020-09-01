@@ -4,7 +4,7 @@ namespace SRP
 {
     public class Libro
     {
-
+        //No es necesario hacer cambios
         public string Titulo { get ; }
         public string Autor { get ; }
         public string Codigo { get ;  }

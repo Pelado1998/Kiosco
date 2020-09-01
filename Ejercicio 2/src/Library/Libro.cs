@@ -4,6 +4,8 @@ namespace SRP
 {
     public class Libro
     {
+        // La clase libro cumple con Expert ya que es el experto de todos los datos de los libros
+        // También cumple con SRP porque tiene una sola responsabilidad que es la de Almacenar los libros
 
         public string Titulo { get ; }
         public string Autor { get ; }

@@ -5,6 +5,10 @@ namespace Library
 {
     public class AppointmentService
     {
+        // La clase AppointmentService cumple Expert porque es el experto que 
+        // posee los datos para crear el appointment
+        // La clase AppointmentService cumple no cumple con SRP ya que además de
+        // crear el appointment se encarga de validar que los datos no sean nulos
         public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
         {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");

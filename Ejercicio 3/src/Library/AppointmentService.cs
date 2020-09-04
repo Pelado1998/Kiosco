@@ -5,7 +5,7 @@ namespace Library
 {
     public class AppointmentService
     {
-        public static string CreateAppointment(Persona persona, Doctor doctor, Cita cita)
+        public static string CreateAppointment(Persona persona, Doctor doctor, Cita cita, CitasDisponibles citasDisponibles)
         {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
             Boolean isValid = true;
@@ -41,10 +41,11 @@ namespace Library
                 isValid = false;
             }
 
-            if (isValid)
+            if (isValid && citaDisponibles.contains(cita))
             {
                 stringBuilder.Append("Appoinment Scheduled");
-                
+                citasDisponibles.remove(cita)
+        
             }
 
             return stringBuilder.ToString();

@@ -5,41 +5,37 @@ namespace Library
 {
     public class AppointmentService
     {
-        // La clase AppointmentService no cumple con Expert ya que no es el experto 
-        // de los datos para crear el appointment. Vienen de afuera.
-        // La clase AppointmentService cumple cumple con SRP ya que
-        // crear el appointment si se puede.
-        public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
+        public static string CreateAppointment(Persona persona, Doctor doctor, Cita cita)
         {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
             Boolean isValid = true;
 
-            if (string.IsNullOrEmpty(name))
+            if (string.IsNullOrEmpty(persona.getnombre))
             {
                 stringBuilder.Append("Unable to schedule appointment, Name is required\n");
                 isValid = false;
             }
 
-            if (string.IsNullOrEmpty(id))
+            if (string.IsNullOrEmpty(cita.getid))
             {
                 stringBuilder.Append("Unable to schedule appointment, id is required\n");
                 isValid = false;
             }
 
-            if (string.IsNullOrEmpty(phoneNumber))
+            if (string.IsNullOrEmpty(persona.getcelular))
             {
                 stringBuilder.Append("Unable to schedule appointment, Phone number is required\n");
                 isValid = false;
             }
 
-            if (string.IsNullOrEmpty(appoinmentPlace))
+            if (string.IsNullOrEmpty(cita.getlugar))
             {
                 stringBuilder.Append("Unable to schedule appointment, Appoinment place is required\n");
                 isValid = false;
             }
 
             
-            if (string.IsNullOrEmpty(doctorName))
+            if (string.IsNullOrEmpty(doctor.getnombre))
             {
                 stringBuilder.Append("Unable to schedule appointment, Doctor name is required\n");
                 isValid = false;
@@ -48,6 +44,7 @@ namespace Library
             if (isValid)
             {
                 stringBuilder.Append("Appoinment Scheduled");
+                
             }
 
             return stringBuilder.ToString();

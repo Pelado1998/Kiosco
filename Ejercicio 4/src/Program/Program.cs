@@ -1,4 +1,7 @@
 ﻿using System;
+using EstadoInicial;
+using ImprimirTablero;
+using Tablero;
 
 namespace PII_Game_Of_Life
 {
@@ -6,7 +9,9 @@ namespace PII_Game_Of_Life
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            bool[,] board=Init("path");
+            PrintBoard(board);
+            board = NextGen(board);
         }
     }
 }

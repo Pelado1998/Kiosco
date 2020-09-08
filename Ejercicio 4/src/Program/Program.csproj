@@ -7,6 +7,9 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Compile Include="..\src\Library\EstadoInicial.cs" />
+    <Compile Include="..\src\Library\ImprimirTablero.cs" />
+    <Compile Include="..\Ejercicio 4\src\Library\Tablero.cs" />
   </PropertyGroup>
 
 </Project>

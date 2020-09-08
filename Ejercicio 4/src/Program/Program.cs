@@ -12,6 +12,7 @@ namespace PII_Game_Of_Life
             bool[,] board=Init("path");
             PrintBoard(board);
             board = NextGen(board);
+            Thread.Sleep(300);
         }
     }
 }

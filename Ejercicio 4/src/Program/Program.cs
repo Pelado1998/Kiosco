@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace PII_Game_Of_Life
 {
@@ -6,11 +7,14 @@ namespace PII_Game_Of_Life
     {
         static void Main(string[] args)
         {
-            bool[,] board=Init("path");
-            PrintBoard(board);
-            board = NextGen(board);
-            Thread.Sleep(300);
-            Tablero tablero = new Tablero(board);
+            bool[,] boardData=EstadoInicial.Init("..\\..\\assets\\board.txt");
+            Tablero board = new Tablero(boardData);
+            while(true)
+            {
+                ImprimirTablero.PrintBoard(board);
+                board.NextGen();
+                Thread.Sleep(300);
+            }
         }
     }
 }

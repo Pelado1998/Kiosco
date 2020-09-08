@@ -13,7 +13,7 @@ namespace PII_Game_Of_Life
             {
                 ImprimirTablero.PrintBoard(board);
                 board.NextGen();
-                Thread.Sleep(300);
+                Thread.Sleep(500);
             }
         }
     }

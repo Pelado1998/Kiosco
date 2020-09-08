@@ -1,7 +1,4 @@
 ﻿using System;
-using EstadoInicial;
-using ImprimirTablero;
-using Tablero;
 
 namespace PII_Game_Of_Life
 {
@@ -13,6 +10,7 @@ namespace PII_Game_Of_Life
             PrintBoard(board);
             board = NextGen(board);
             Thread.Sleep(300);
+            Tablero tablero = new Tablero(board);
         }
     }
 }

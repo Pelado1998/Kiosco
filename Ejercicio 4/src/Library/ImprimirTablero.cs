@@ -8,8 +8,7 @@ namespace PII_Game_Of_Life
         public static void PrintBoard(Tablero b){
             int width = b.Data.GetLength(0);  // variabe que representa el ancho del tablero
             int height = b.Data.GetLength(1); // variabe que representa altura del tablero
-            while (true)
-            {
+
                 Console.Clear();
                 StringBuilder s = new StringBuilder();
                 for (int y = 0; y<height;y++)
@@ -28,7 +27,7 @@ namespace PII_Game_Of_Life
                     s.Append("\n");
                 }
                 Console.WriteLine(s.ToString());
-            }
+
         }
     }
 }

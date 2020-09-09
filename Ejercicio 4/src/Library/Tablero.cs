@@ -14,7 +14,6 @@ namespace PII_Game_Of_Life
         {
             int boardWidth = this.Data.GetLength(0);
             int boardHeight = this.Data.GetLength(1);
-
             bool[,] cloneboard = new bool[boardWidth, boardHeight];
             for (int x = 0; x < boardWidth; x++)
             {
